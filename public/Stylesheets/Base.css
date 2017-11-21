@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:100,300,400,700|Source+Code+Pro:200,400|Material+Icons');
+
+:root {
+    --default-font-family: "Quicksand", "Nunito", "Varela Round", Roboto, "Product Sans", sans-serif;
+    --code-font-family: "Source Code Pro", "Inconsolata", "Roboto Mono", monospace;
+}
+
+html {
+    height: 100%;
+    font-family: var(--default-font-family);
+    font-weight: 300;
+    font-size: 13px;
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 4fr;
+    height: 100%;
+    margin: 0;
+    background: #111111;
+    color: #FFFFFF;
+    overflow: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #363636;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2),0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12);
+}
+header > .title {
+    font-size: 32px;
+    font-weight: 100;
+}
+header > .separator {
+    width: 1px;
+    height: 50%;
+    background: rgba(255, 255, 255, .4);
+    margin: 0 10px;
+}
+header > .route {
+    font-family: var(--code-font-family);
+    font-size: 16px;
+    font-weight: 200;
+}
+header > .spacer {
+    flex-grow: 1;
+}
+header .menu {
+    background: transparent;
+    padding: 5px 7px;
+    height: auto;
+    border: none;
+    line-height: .9;
+    color: #FFFFFF;
+    font-size: 22px;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: 300ms all ease-in;
+}
+header .menu:hover, header .menu.activated {
+    background: rgba(255, 255, 255, .09);
+}
+header .menu.activated {
+    border-radius: 0;
+}
+header > .nav-container {
+    position: relative;
+}
+header > .nav-container > nav {
+    position: absolute;
+    top: -496px;
+    right: calc(100% - 36px);
+    width: 240px;
+    padding: 8px 0;
+    background: #414141;
+    transition: 300ms all ease-in;
+}
+header > .nav-container > nav.activated {
+    top: 100%;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+header > .nav-container > nav > a {
+    color: #FFFFFF;
+    font-family: var(--code-font-family);
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    padding: 13px 11px;
+    transition: 100ms all ease-in;
+}
+header > .nav-container > nav > a:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto 200px;
+    grid-column-gap: 10px;
+    padding: 10px 10px 0 10px;
+}
+
+pre, code {
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, .4);
+}
+
+.section-title {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 7px 0;
+}
+
+.generic-card-title {
+    display: block;
+    font-size: 22px;
+    font-weight: 100;
+    margin: 7px 0;
+}
+
+.name-circle {
+    display: block;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: none;
+    font-size: 16px;
+    line-height: 28px;
+    background: rgba(255, 255, 255, .3);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-right: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-column-gap: 5px;
+    }
+}
+
+.card-row .card {
+    background: rgba(255, 255, 255, .1);
+    padding: 10px 10px 0 10px;
+    max-width: calc(100% - 20px);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    margin: 10px 0;
+}
+.card > .sender {
+    font-size: 24px;
+    display: block;
+    margin: 0 0 10px 0;
+    font-weight: 100;
+}
+.card > .sender .link-icon {
+    font-size: 12px;
+    color: #06d6a0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.card > .content {
+    line-height: 1.785;
+    padding-bottom: 10px;
+}
+
+.card .code {
+    font-family: var(--code-font-family);
+    font-size: 12px;
+    line-height: 1.185;
+    font-weight: 100;
+    color: rgba(255, 255, 255, .4);
+}
+
+.card .like-bar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 100%;
+    margin-left: -10px;
+    text-align: right;
+}
+.card .like-bar > button {
+    border: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: #06d6a0;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 32px;
+    outline: transparent none 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .35);
+    margin: 0 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card .comment-bar {
+    background: rgba(0, 0, 0, .9);
+    padding: 10px;
+    width: 100%;
+    margin-left: -10px;
+}
+.comment-bar .comments {
+    max-height: 150px;
+    overflow: auto;
+}
+.comments > .comment {
+    display: flex;
+    margin: 5px 0;
+}
+.comments > .comment > .content {
+    flex-grow: 1;
+    align-self: center;
+}
+.comment-bar > .input-bar {
+    margin-top: 10px;
+}
+.comment-bar > .input-bar input {
+    width: calc(100% - 20px);
+    height: 32px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 1);
+    color: #FFFFFF;
+    font-family: var(--default-font-family);
+    padding: 0 10px;
+    transition: 300ms all;
+    border: 1px solid #212121;
+}
+.comment-bar > .input-bar input:focus {
+    border-color: #363636;
+}
+
+.chat-row > .chat-list {
+    height: calc(100% - 30px);
+    overflow: auto;
+}
+.chat-list > .person-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: 300ms all ease-in;
+}
+.person-item > .name {
+    flex-grow: 1;
+    align-self: center;
+}
+.chat-list > .person-item:hover {
+    background: rgba(255, 255, 255, .1);
+}
+.material-icons {
+    font-size: inherit !important;
+    display: inline-flex;
+    vertical-align: middle;
+}

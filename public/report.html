@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="Stylesheets/Base.css" rel="stylesheet">
+    <link href="Stylesheets/ReportMod.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - Niobium</title>
+</head>
+<body>
+<header>
+    <span class="title">Niobium</span>
+    <div class="separator"></div>
+    <span class="route">/Report</span>
+    <div class="spacer"></div>
+    <section class="nav-container">
+        <button class="menu" data-handler="page-menu">
+            <i class="material-icons">menu</i>
+        </button>
+        <nav data-listener="page-menu">
+            <a href="index.html">/Index</a>
+            <a href="profile.html">/Profile</a>
+            <a href="preferences.html">/Preferences</a>
+            <a href="#">/LogOut</a>
+            <a href="report.html">/Report</a>
+        </nav>
+    </section>
+</header>
+<main>
+    <section class="page-content-card">
+        <span class="title">Found a Bug? Let me know.</span>
+        <form>
+            <input class="bug-title" name="bug-title" placeholder="Bug Title Goes Here">
+            <textarea class="bug-description" placeholder="Bug Description Goes Here" name="bug-description"></textarea>
+            <section class="button-right-container">
+                <button class="confirm-button" type="submit">Send <i class="material-icons">send</i></button>
+            </section>
+        </form>
+    </section>
+    <section class="chat-row">
+        <span class="section-title">People Accessible</span>
+        <section class="chat-list">
+            <section class="person-item">
+                <span class="name-circle">M</span>
+                <section class="name">MagusElias</section>
+            </section>
+        </section>
+    </section>
+</main>
+<script src="Scripts/BasicHandlers.js"></script>
+</body>
+</html>

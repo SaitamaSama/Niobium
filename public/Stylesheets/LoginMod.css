@@ -1,0 +1,62 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 400px;
+    padding: 10px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, .4);
+}
+
+.login-card input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: 18px;
+    border-radius: 22px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    font-family: var(--default-font-family);
+    font-weight: 100;
+    border: none;
+    background: rgba(0, 0, 0, .8);
+    margin: 10px 0;
+    transition: 300ms all ease;
+}
+.login-card input:focus {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.login-card > .submit-button-container {
+    text-align: right;
+    margin-top: 10px;
+}
+.login-card > .submit-button-container > .submit {
+    padding: 6px;
+    font-family: var(--default-font-family);
+    background: #06d6a0;
+    border: none;
+    border-radius: 2.5px;
+    font-size: 15px;
+    color: #FFFFFF;
+    transition: 300ms all ease;
+    cursor: pointer;
+}
+.login-card > .submit-button-container > .submit:hover {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.hint {
+    margin: 13px 0;
+    font-size: 11px;
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+}
+.hint a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 13px;
+}

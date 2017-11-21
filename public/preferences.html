@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="Stylesheets/Base.css" rel="stylesheet">
+    <link href="Stylesheets/PreferencesMod.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences - Niobium</title>
+</head>
+<body>
+<header>
+    <span class="title">Niobium</span>
+    <div class="separator"></div>
+    <span class="route">/Preferences</span>
+    <div class="spacer"></div>
+    <section class="nav-container">
+        <button class="menu" data-handler="page-menu">
+            <i class="material-icons">menu</i>
+        </button>
+        <nav data-listener="page-menu">
+            <a href="index.html">/Index</a>
+            <a href="profile.html">/Profile</a>
+            <a href="preferences.html">/Preferences</a>
+            <a href="#">/LogOut</a>
+            <a href="report.html">/Report</a>
+        </nav>
+    </section>
+</header>
+<main>
+    <section class="settings-card-row">
+        <section class="settings-card transparent-bg">
+            <section class="button-right-container">
+                <button class="confirm-button">Apply All <i class="material-icons">done</i></button>
+            </section>
+        </section>
+        <section class="settings-card">
+            <span class="section-title">General Preferences</span>
+            <section class="option-container">
+                <section class="text">
+                    Chat appears as a sidebar
+                </section>
+                <section class="switch-container">
+                    <input type="checkbox" id="chat-sidebar" name="chat-sidebar" class="switch-input">
+                    <label for="chat-sidebar" class="switch-label"></label>
+                </section>
+            </section>
+            <section class="option-container">
+                <section class="text">
+                    Use a light theme instead of dark
+                </section>
+                <section class="switch-container">
+                    <input type="checkbox" id="theme" name="chat-sidebar" class="switch-input">
+                    <label for="theme" class="switch-label"></label>
+                </section>
+            </section>
+            <section class="option-container">
+                <section class="text">
+                    Hide real name from profile
+                </section>
+                <section class="switch-container">
+                    <input type="checkbox" id="hide-real-name" name="chat-sidebar" class="switch-input">
+                    <label for="hide-real-name" class="switch-label"></label>
+                </section>
+            </section>
+        </section>
+        <section class="settings-card">
+            <span class="section-title">Miscellaneous</span>
+            <section class="option-container">
+                <section class="text">
+                    Allow browser based notification
+                </section>
+                <section class="switch-container">
+                    <input type="checkbox" id="hide-notification" name="chat-sidebar" class="switch-input">
+                    <label for="hide-notification" class="switch-label"></label>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="chat-row">
+        <span class="section-title">People Accessible</span>
+        <section class="chat-list">
+            <section class="person-item">
+                <span class="name-circle">M</span>
+                <section class="name">MagusElias</section>
+            </section>
+        </section>
+    </section>
+    <section class="dialog-container">
+        <section class="dialog">
+            <span class="title">Are you sure?</span>
+            <section class="details">
+                Apply these changes?
+            </section>
+            <section class="button-container">
+                <button class="nay-button">Stahp <i class="material-icons">close</i></button>
+                <button class="confirm-button">Yeah <i class="material-icons">done</i></button>
+            </section>
+        </section>
+    </section>
+</main>
+<script src="Scripts/BasicHandlers.js"></script>
+</body>
+</html>

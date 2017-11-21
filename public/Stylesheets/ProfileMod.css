@@ -1,0 +1,56 @@
+main.profile-page {
+    grid-template-columns: auto 200px;
+}
+
+.profile-container {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px 30px 10px 10px;
+    display: flex;
+    height: 50%;
+}
+
+.profile-container .text-details {
+    flex-grow: 1;
+    align-self: center;
+}
+
+.profile-container .avatar-container {
+    width: 128px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-container .avatar-container .avatar {
+    background: rgba(255, 255, 255, .4);
+    color: #FFFFFF;
+    font-size: 50px;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    line-height: 128px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.profile-container .username {
+    font-weight: 100;
+    font-size: 48px;
+    margin: 5px 0;
+}
+.profile-container .bio {
+    width: 60%;
+    line-height: 2;
+}
+.profile-container .name {
+    font-size: 18px;
+    display: block;
+    margin: 4px 0;
+    color: rgba(255, 255, 255, .7);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
